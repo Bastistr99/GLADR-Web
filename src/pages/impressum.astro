@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Impressum – GLADR"
+  description="Impressum der GLADR App gemäß § 5 TMG."
+>
+  <div class="bg-background min-h-screen">
+    <!-- Header -->
+    <div class="bg-midnight py-16">
+      <div class="max-w-3xl mx-auto px-6">
+        <a href="/" class="inline-flex items-center gap-2 text-white/50 hover:text-white text-sm font-inter mb-8 transition-colors">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Zurück zur Startseite
+        </a>
+        <h1 class="font-grotesk font-bold text-4xl sm:text-5xl text-white">Impressum</h1>
+        <p class="font-inter text-white/50 mt-4">Angaben gemäß § 5 TMG</p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-3xl mx-auto px-6 py-16">
+
+      <section class="mb-12">
+        <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">Angaben gemäß § 5 TMG</h2>
+        <div class="bg-white rounded-card border border-border p-6 font-inter text-midnight/70 leading-relaxed">
+          <p><strong class="text-midnight">[PLATZHALTER: Name / Firma]</strong></p>
+          <p>[PLATZHALTER: Straße, Hausnummer]</p>
+          <p>[PLATZHALTER: PLZ, Stadt]</p>
+          <p>Deutschland</p>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">Kontakt</h2>
+        <div class="bg-white rounded-card border border-border p-6 font-inter text-midnight/70 leading-relaxed">
+          <p>E-Mail: <a href="mailto:hallo@gladr.app" class="text-emerald hover:underline">hallo@gladr.app</a></p>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+        <div class="bg-white rounded-card border border-border p-6 font-inter text-midnight/70 leading-relaxed">
+          <p><strong class="text-midnight">[PLATZHALTER: Name]</strong></p>
+          <p>[PLATZHALTER: Adresse]</p>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">Haftungsausschluss</h2>
+        <div class="space-y-6">
+          <div class="bg-white rounded-card border border-border p-6">
+            <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">Haftung für Inhalte</h3>
+            <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+              Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit,
+              Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+              Die steuerlichen Informationen auf dieser Website dienen ausschließlich der allgemeinen
+              Information und stellen keine Rechts- oder Steuerberatung dar.
+            </p>
+          </div>
+          <div class="bg-white rounded-card border border-border p-6">
+            <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">Haftung für Links</h3>
+            <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+              Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
+              Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
+              oder Betreiber der Seiten verantwortlich.
+            </p>
+          </div>
+          <div class="bg-white rounded-card border border-border p-6">
+            <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">Urheberrecht</h3>
+            <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+              dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+              der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
+              Zustimmung des jeweiligen Autors bzw. Erstellers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Base>

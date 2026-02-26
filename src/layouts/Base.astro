@@ -1,0 +1,105 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'GLADR hilft Studierenden, ihre Steuererstattung für Fahrten zur Uni, Bibliothek und Lerngruppen automatisch zu erfassen.',
+  ogImage = '/og-image.png',
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://gladr.app');
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="de_DE" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Self-hosted fonts -->
+    <style>
+      @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/fonts/SpaceGrotesk-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/fonts/SpaceGrotesk-SemiBold.woff2') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/Inter-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/Inter-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-background font-inter text-midnight antialiased">
+    <slot />
+
+    <footer class="bg-midnight text-white/60 py-10">
+      <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+        <span class="font-grotesk font-semibold text-white">GLADR</span>
+        <nav class="flex gap-6">
+          <a href="/datenschutz" class="hover:text-white transition-colors">Datenschutz</a>
+          <a href="/impressum" class="hover:text-white transition-colors">Impressum</a>
+          <a href="mailto:hallo@gladr.app" class="hover:text-white transition-colors">Kontakt</a>
+        </nav>
+        <span>&copy; GLADR 2026</span>
+      </div>
+    </footer>
+  </body>
+</html>

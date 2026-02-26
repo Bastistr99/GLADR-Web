@@ -1,0 +1,331 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="GLADR – Deine Steuererstattung. Automatisch."
+  description="Als Student fährst du jedes Semester hunderte Kilometer. Das Finanzamt erstattet dir das – GLADR trackt es automatisch."
+>
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-midnight min-h-screen flex items-center relative overflow-hidden">
+    <!-- Subtle background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-midnight via-midnight to-[#1a2744] pointer-events-none"></div>
+    <!-- Emerald glow blob -->
+    <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-emerald/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/4 left-1/3 w-64 h-64 bg-indigo/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 py-24 sm:py-32">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 bg-white/10 text-white/70 text-sm font-inter px-4 py-1.5 rounded-full mb-8 border border-white/10">
+          <span class="w-2 h-2 rounded-full bg-emerald animate-pulse"></span>
+          Coming Soon &middot; iOS &amp; Android
+        </div>
+
+        <h1 class="font-grotesk font-bold text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6">
+          Deine<br />
+          Steuererstattung.<br />
+          <span class="text-emerald">Automatisch.</span>
+        </h1>
+
+        <p class="font-inter text-lg sm:text-xl text-white/70 leading-relaxed mb-10 max-w-xl">
+          Als Student fährst du jedes Semester hunderte Kilometer zur Uni, Bibliothek und zu
+          Lerngruppen. Das Finanzamt erstattet dir das&nbsp;— die meisten wissen es nur nicht.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#wie-es-funktioniert"
+            class="inline-flex items-center justify-center gap-2 bg-emerald text-midnight font-grotesk font-semibold px-8 py-4 rounded-xl hover:bg-emerald/90 transition-colors text-base"
+          >
+            Wie es funktioniert
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a
+            href="#das-problem"
+            class="inline-flex items-center justify-center gap-2 border border-white/20 text-white/80 font-inter px-8 py-4 rounded-xl hover:border-white/40 hover:text-white transition-colors text-base"
+          >
+            Mehr erfahren
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="mt-20 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-white/10 pt-12">
+        <div>
+          <div class="font-grotesk font-bold text-3xl text-white mb-1">450&nbsp;€</div>
+          <div class="font-inter text-sm text-white/50">Ø Erstattung pro Jahr</div>
+        </div>
+        <div>
+          <div class="font-grotesk font-bold text-3xl text-white mb-1">§&nbsp;9 EStG</div>
+          <div class="font-inter text-sm text-white/50">Gesetzlich verankert</div>
+        </div>
+        <div class="col-span-2 sm:col-span-1">
+          <div class="font-grotesk font-bold text-3xl text-white mb-1">0,38&nbsp;€</div>
+          <div class="font-inter text-sm text-white/50">pro Kilometer zur Uni</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAS PROBLEM ===== -->
+  <section id="das-problem" class="bg-background py-24 sm:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="max-w-2xl mb-16">
+        <p class="font-inter text-sm font-medium text-emerald uppercase tracking-widest mb-4">Das Problem</p>
+        <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-midnight leading-tight mb-6">
+          450&nbsp;€ pro Jahr.<br />Meistens ungenutzt.
+        </h2>
+        <p class="font-inter text-lg text-midnight/60 leading-relaxed">
+          Das Steuerrecht gibt Studierenden das Recht auf diese Erstattungen&nbsp;— aber kaum jemand
+          behält die Überblick über seine Fahrten. GLADR erledigt das automatisch.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-card border border-border p-6">
+          <div class="w-10 h-10 rounded-xl bg-emerald/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 2L4 7h3v8h6V7h3L10 2z" fill="#10B981"/>
+            </svg>
+          </div>
+          <div class="font-grotesk font-semibold text-2xl text-midnight mb-1">0,38&nbsp;€/km</div>
+          <div class="font-inter font-medium text-midnight mb-2">Entfernungspauschale</div>
+          <p class="font-inter text-sm text-midnight/60 leading-relaxed">
+            Für jeden Kilometer zwischen Wohnort und Uni. Hin- und Rückweg, für jeden Studientag.
+            Geregelt in §&nbsp;9 Abs.&nbsp;1 Satz&nbsp;3 Nr.&nbsp;4 EStG.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-card border border-border p-6">
+          <div class="w-10 h-10 rounded-xl bg-indigo/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <rect x="3" y="5" width="14" height="10" rx="2" stroke="#6366F1" stroke-width="1.5"/>
+              <path d="M7 5V4a1 1 0 011-1h4a1 1 0 011 1v1" stroke="#6366F1" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="font-grotesk font-semibold text-2xl text-midnight mb-1">0,30&nbsp;€/km</div>
+          <div class="font-inter font-medium text-midnight mb-2">Reisekosten</div>
+          <p class="font-inter text-sm text-midnight/60 leading-relaxed">
+            Für Fahrten zur Bibliothek, zu Lerngruppen oder Exkursionen. Hin- und
+            Rückweg werden automatisch berechnet.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-card border border-border p-6">
+          <div class="w-10 h-10 rounded-xl bg-error/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="7" stroke="#E11D48" stroke-width="1.5"/>
+              <path d="M10 6v5M10 14v.5" stroke="#E11D48" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="font-grotesk font-semibold text-2xl text-midnight mb-1">14–28&nbsp;€</div>
+          <div class="font-inter font-medium text-midnight mb-2">Verpflegungspauschale</div>
+          <p class="font-inter text-sm text-midnight/60 leading-relaxed">
+            Bei Fahrten über 8 Stunden: 14&nbsp;€. Bei Fahrten über 24 Stunden: 28&nbsp;€.
+            Nur für Reisefahrten, nicht Pendeln.
+          </p>
+        </div>
+      </div>
+
+      <p class="font-inter text-sm text-midnight/50 mt-8 text-center">
+        „Das Gesetz gibt dir das Recht&nbsp;— du musst es nur einfordern."
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== WIE ES FUNKTIONIERT ===== -->
+  <section id="wie-es-funktioniert" class="bg-midnight py-24 sm:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="max-w-2xl mb-16">
+        <p class="font-inter text-sm font-medium text-emerald uppercase tracking-widest mb-4">So funktioniert es</p>
+        <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-white leading-tight mb-6">
+          Einmal einrichten.<br />
+          <span class="text-emerald">Automatisch tracken.</span>
+        </h2>
+        <p class="font-inter text-lg text-white/60 leading-relaxed">
+          Kein manuelles Eintragen. Kein vergessener Fahrtweg. GLADR erkennt automatisch,
+          wann du losfährst und wann du ankommst.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="relative">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald/20 flex items-center justify-center font-grotesk font-bold text-emerald text-lg">1</div>
+            <div class="h-px flex-1 bg-white/10 sm:hidden"></div>
+          </div>
+          <h3 class="font-grotesk font-semibold text-xl text-white mb-3">App installieren</h3>
+          <p class="font-inter text-white/60 leading-relaxed">
+            Trag einmal deinen Wohnort und deine Uni ein. Das war's. Die App läuft
+            danach im Hintergrund.
+          </p>
+        </div>
+
+        <!-- Connector (desktop) -->
+        <div class="hidden sm:flex items-start pt-5">
+          <div class="w-full h-px bg-white/10 mt-0"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative sm:-ml-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-indigo/20 flex items-center justify-center font-grotesk font-bold text-indigo-500 text-lg">2</div>
+          </div>
+          <h3 class="font-grotesk font-semibold text-xl text-white mb-3">Automatisch tracken</h3>
+          <p class="font-inter text-white/60 leading-relaxed">
+            GLADR erkennt per GPS-Geofencing, wann du eine Zone verlässt oder betrittst.
+            Fahrten werden automatisch erfasst und kategorisiert.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 separately for full width -->
+      <div class="mt-10 sm:mt-16 bg-white/5 border border-white/10 rounded-card p-8">
+        <div class="flex items-start gap-6">
+          <div class="w-10 h-10 rounded-xl bg-emerald/20 flex items-center justify-center font-grotesk font-bold text-emerald text-lg flex-shrink-0">3</div>
+          <div>
+            <h3 class="font-grotesk font-semibold text-xl text-white mb-3">Fertige Übersicht für die Steuererklärung</h3>
+            <p class="font-inter text-white/60 leading-relaxed max-w-2xl">
+              Am Ende des Steuerjahres bekommst du eine vollständige Auflistung aller
+              Fahrten, Kilometer und Steuerbeträge — genau so, wie das Finanzamt es
+              braucht. Einfach übertragen, fertig.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAS GESETZ ===== -->
+  <section class="bg-background py-24 sm:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="max-w-2xl mb-16">
+        <p class="font-inter text-sm font-medium text-emerald uppercase tracking-widest mb-4">Rechtliche Grundlage</p>
+        <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-midnight leading-tight mb-6">
+          Nicht erfunden.<br />Gesetzlich geregelt.
+        </h2>
+        <p class="font-inter text-lg text-midnight/60 leading-relaxed">
+          GLADR berechnet nichts dazu. Wir wenden nur an, was das Einkommensteuergesetz
+          ohnehin vorsieht.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-white rounded-card border border-border p-8">
+          <div class="font-grotesk font-semibold text-sm text-emerald mb-3 uppercase tracking-wider">§ 9 Abs. 1 Satz 3 Nr. 4 EStG</div>
+          <h3 class="font-grotesk font-bold text-xl text-midnight mb-4">Entfernungspauschale</h3>
+          <p class="font-inter text-midnight/60 leading-relaxed mb-4">
+            Werbungskosten für Fahrten zwischen Wohnung und erster Tätigkeitsstätte
+            (für Studierende: der Hauptcampus). 0,38&nbsp;€ pro Entfernungskilometer,
+            für jeden Anwesenheitstag.
+          </p>
+          <div class="bg-background rounded-lg p-4 font-inter text-sm text-midnight/50">
+            <strong class="text-midnight">Beispiel:</strong> 15 km zur Uni × 0,38&nbsp;€ × 180 Tage = <strong class="text-midnight font-grotesk">1.026&nbsp;€</strong>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-card border border-border p-8">
+          <div class="font-grotesk font-semibold text-sm text-indigo-500 mb-3 uppercase tracking-wider">§ 9 Abs. 1 Satz 3 Nr. 5a EStG</div>
+          <h3 class="font-grotesk font-bold text-xl text-midnight mb-4">Reisekosten &amp; Verpflegung</h3>
+          <p class="font-inter text-midnight/60 leading-relaxed mb-4">
+            Für auswärtige Tätigkeiten außerhalb der ersten Tätigkeitsstätte — also
+            Bibliothek, Lerngruppen, Exkursionen. 0,30&nbsp;€/km (Hin- und Rückweg)
+            plus Verpflegungsmehraufwand bei langen Fahrten.
+          </p>
+          <div class="bg-background rounded-lg p-4 font-inter text-sm text-midnight/50">
+            <strong class="text-midnight">Verpflegung:</strong> 14&nbsp;€ bei &gt; 8h · 28&nbsp;€ bei &gt; 24h
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DATENSCHUTZ BADGE ===== -->
+  <section class="bg-midnight py-24 sm:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="max-w-2xl mb-12">
+        <p class="font-inter text-sm font-medium text-emerald uppercase tracking-widest mb-4">Datenschutz</p>
+        <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-white leading-tight">
+          Deine Daten.<br />Deine Kontrolle.
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="flex items-start gap-4 bg-white/5 border border-white/10 rounded-card p-6">
+          <div class="w-8 h-8 rounded-lg bg-emerald/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3 3 7-7" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-grotesk font-semibold text-white mb-1">Keine Drittanbieter-Werbung</div>
+            <p class="font-inter text-sm text-white/50">Keine Weitergabe deiner Daten an Werbetreibende. Niemals.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white/5 border border-white/10 rounded-card p-6">
+          <div class="w-8 h-8 rounded-lg bg-emerald/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3 3 7-7" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-grotesk font-semibold text-white mb-1">Hosting in der EU</div>
+            <p class="font-inter text-sm text-white/50">Alle Daten werden ausschließlich auf EU-Servern gespeichert. DSGVO-konform.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white/5 border border-white/10 rounded-card p-6">
+          <div class="w-8 h-8 rounded-lg bg-emerald/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3 3 7-7" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-grotesk font-semibold text-white mb-1">Vollständige Löschung</div>
+            <p class="font-inter text-sm text-white/50">Dein Account und alle Daten können jederzeit vollständig gelöscht werden.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white/5 border border-white/10 rounded-card p-6">
+          <div class="w-8 h-8 rounded-lg bg-emerald/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3 3 7-7" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-grotesk font-semibold text-white mb-1">Transparenz</div>
+            <p class="font-inter text-sm text-white/50">
+              Unsere <a href="/datenschutz" class="text-emerald hover:underline">Datenschutzerklärung</a> erklärt genau, welche Daten wir warum erfassen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="bg-emerald py-20 sm:py-24">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-midnight mb-6 leading-tight">
+        Bereit, deine Erstattung<br />einzufordern?
+      </h2>
+      <p class="font-inter text-lg text-midnight/70 mb-8 max-w-lg mx-auto">
+        GLADR erscheint bald für iOS und Android. Trag dich ein und wir
+        melden uns, sobald die App verfügbar ist.
+      </p>
+      <div class="inline-flex items-center gap-2 bg-midnight text-white/60 text-sm font-inter px-6 py-3 rounded-full border border-midnight/20">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse border-2 border-midnight"></span>
+        Coming Soon &middot; iOS &amp; Android
+      </div>
+    </div>
+  </section>
+
+</Base>
