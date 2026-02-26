@@ -70,134 +70,58 @@ import Base from '../layouts/Base.astro';
           </div>
         </div>
 
-        <!-- Right: Phone Mockup -->
+        <!-- Right: Real App Screenshot -->
         <div class="hidden lg:flex justify-center items-center">
           <div class="relative">
-            <!-- Glow behind phone -->
             <div class="absolute -inset-8 bg-emerald/10 rounded-[5rem] blur-3xl"></div>
             <div class="absolute -inset-4 bg-indigo/5 rounded-[4rem] blur-2xl"></div>
-
-            <!-- Phone frame -->
-            <div class="relative w-[280px] h-[580px] bg-[#0d1526] rounded-[3rem] border border-white/10 shadow-2xl overflow-hidden">
-
-              <!-- Dynamic island -->
-              <div class="absolute top-4 left-1/2 -translate-x-1/2 w-28 h-7 bg-black rounded-full z-10 flex items-center justify-center gap-2">
-                <div class="w-2 h-2 rounded-full bg-white/20"></div>
-                <div class="w-3 h-3 rounded-full bg-white/10 border border-white/20"></div>
-              </div>
-
-              <!-- Screen content -->
-              <div class="pt-16 px-5 pb-6 h-full flex flex-col">
-
-                <!-- App header -->
-                <div class="flex justify-between items-center mb-5">
-                  <div>
-                    <div class="font-grotesk font-bold text-white text-base">GLADR</div>
-                    <div class="font-inter text-white/30 text-xs">Steuerjahr 2026</div>
-                  </div>
-                  <!-- Geofence active badge -->
-                  <div class="flex items-center gap-1.5 bg-emerald/15 border border-emerald/30 rounded-full px-3 py-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald"></span>
-                    <span class="font-inter text-emerald text-xs">Aktiv</span>
-                  </div>
-                </div>
-
-                <!-- Main stat card -->
-                <div class="bg-gradient-to-br from-emerald/20 to-emerald/5 border border-emerald/20 rounded-2xl p-4 mb-5">
-                  <div class="font-inter text-white/50 text-xs mb-1">Erstattungspotenzial</div>
-                  <div class="font-grotesk font-bold text-4xl text-emerald mb-1">387,50&nbsp;€</div>
-                  <div class="flex items-center gap-1.5">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <path d="M2 8l4-4 4 4" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span class="font-inter text-emerald/70 text-xs">+23,00&nbsp;€ diese Woche</span>
-                  </div>
-                </div>
-
-                <!-- Trip list -->
-                <div class="font-inter text-white/30 text-xs mb-3 uppercase tracking-wider">Letzte Fahrten</div>
-                <div class="space-y-2.5 flex-1">
-
-                  <div class="bg-white/5 rounded-xl p-3 flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-emerald/15 flex items-center justify-center flex-shrink-0">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M7 1C4.79 1 3 2.79 3 5c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4z" fill="#10B981"/>
-                        <circle cx="7" cy="5" r="1.5" fill="#0d1526"/>
-                      </svg>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                      <div class="font-inter text-white text-xs font-medium">Uni Köln</div>
-                      <div class="font-inter text-white/30 text-xs">Heute · 38 km</div>
-                    </div>
-                    <div class="font-grotesk font-semibold text-emerald text-sm">+14,44&nbsp;€</div>
-                  </div>
-
-                  <div class="bg-white/5 rounded-xl p-3 flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-indigo/15 flex items-center justify-center flex-shrink-0">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <rect x="2" y="3" width="10" height="8" rx="1.5" stroke="#6366F1" stroke-width="1.2"/>
-                        <path d="M4 3V2.5a.5.5 0 011 0V3M9 3V2.5a.5.5 0 011 0V3" stroke="#6366F1" stroke-width="1.2" stroke-linecap="round"/>
-                        <path d="M4.5 7h5M4.5 9h3" stroke="#6366F1" stroke-width="1.2" stroke-linecap="round"/>
-                      </svg>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                      <div class="font-inter text-white text-xs font-medium">Stadtbibliothek</div>
-                      <div class="font-inter text-white/30 text-xs">Gestern · 12 km</div>
-                    </div>
-                    <div class="font-grotesk font-semibold text-white/50 text-sm">+3,60&nbsp;€</div>
-                  </div>
-
-                  <div class="bg-white/5 rounded-xl p-3 flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center flex-shrink-0">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <circle cx="4" cy="5" r="1.5" stroke="#94a3b8" stroke-width="1.2"/>
-                        <circle cx="10" cy="5" r="1.5" stroke="#94a3b8" stroke-width="1.2"/>
-                        <circle cx="7" cy="9" r="1.5" stroke="#94a3b8" stroke-width="1.2"/>
-                        <path d="M5.5 5h3M5 6l-1 2.5M9 6l1 2.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
-                      </svg>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                      <div class="font-inter text-white text-xs font-medium">Lerngruppe</div>
-                      <div class="font-inter text-white/30 text-xs">Mo · 18 km</div>
-                    </div>
-                    <div class="font-grotesk font-semibold text-white/50 text-sm">+5,40&nbsp;€</div>
-                  </div>
-
-                </div>
-
-                <!-- Bottom nav bar -->
-                <div class="flex justify-around items-center pt-4 border-t border-white/8 mt-3">
-                  <div class="flex flex-col items-center gap-1">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                      <rect x="2" y="9" width="4" height="7" rx="1" fill="#10B981"/>
-                      <rect x="7" y="5" width="4" height="11" rx="1" fill="#10B981" opacity="0.5"/>
-                      <rect x="12" y="2" width="4" height="14" rx="1" fill="#10B981" opacity="0.3"/>
-                    </svg>
-                    <div class="w-1 h-1 rounded-full bg-emerald"></div>
-                  </div>
-                  <div class="flex flex-col items-center gap-1">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                      <path d="M9 2L3 7h2v7h3v-4h2v4h3V7h2L9 2z" fill="#475569"/>
-                    </svg>
-                    <div class="w-1 h-1 rounded-full bg-transparent"></div>
-                  </div>
-                  <div class="flex flex-col items-center gap-1">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                      <circle cx="9" cy="7" r="3" stroke="#475569" stroke-width="1.5"/>
-                      <path d="M3 16c0-3.31 2.69-6 6-6s6 2.69 6 6" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                    <div class="w-1 h-1 rounded-full bg-transparent"></div>
-                  </div>
-                </div>
-
-                <!-- Home indicator -->
-                <div class="flex justify-center mt-3">
-                  <div class="w-24 h-1 bg-white/20 rounded-full"></div>
-                </div>
-
-              </div>
+            <div class="relative w-[280px] rounded-[3rem] border-2 border-white/10 shadow-2xl overflow-hidden">
+              <img
+                src="/img/IMG_0975.PNG"
+                alt="GLADR Dashboard – Steuererstattung 1.120 Euro"
+                class="w-full h-auto block"
+              />
             </div>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APP PREVIEW ===== -->
+  <section class="bg-[#0b1120] py-20 sm:py-28 overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="font-inter text-sm font-medium text-emerald uppercase tracking-widest mb-4 text-center">Die App</p>
+      <h2 class="font-grotesk font-bold text-3xl sm:text-4xl text-white text-center mb-16 leading-tight">
+        Alles auf einen Blick.
+      </h2>
+
+      <!-- 3 phones fan -->
+      <div class="flex justify-center items-end gap-6">
+
+        <!-- Left phone: Einstellungen -->
+        <div class="hidden sm:block relative flex-shrink-0" style="transform: rotate(-6deg) translateY(24px);">
+          <div class="w-[180px] rounded-[2.2rem] border border-white/10 shadow-xl overflow-hidden opacity-70 hover:opacity-90 transition-opacity">
+            <img src="/img/IMG_0978.PNG" alt="GLADR Geofence-Zonen Einstellungen" class="w-full h-auto block" />
+          </div>
+          <p class="font-inter text-xs text-white/30 text-center mt-3">Zonen einrichten</p>
+        </div>
+
+        <!-- Center phone: Dashboard (main) -->
+        <div class="relative flex-shrink-0 z-10">
+          <div class="w-[230px] rounded-[2.8rem] border-2 border-white/20 shadow-2xl overflow-hidden ring-1 ring-emerald/20">
+            <img src="/img/IMG_0975.PNG" alt="GLADR Dashboard – Steuererstattungsübersicht" class="w-full h-auto block" />
+          </div>
+          <p class="font-inter text-xs text-white/50 text-center mt-3">Dashboard</p>
+        </div>
+
+        <!-- Right phone: Steuerreise -->
+        <div class="hidden sm:block relative flex-shrink-0" style="transform: rotate(6deg) translateY(24px);">
+          <div class="w-[180px] rounded-[2.2rem] border border-white/10 shadow-xl overflow-hidden opacity-70 hover:opacity-90 transition-opacity">
+            <img src="/img/IMG_0979.PNG" alt="GLADR Steuerreise – Fortschritt" class="w-full h-auto block" />
+          </div>
+          <p class="font-inter text-xs text-white/30 text-center mt-3">Steuerreise</p>
         </div>
 
       </div>
@@ -219,8 +143,7 @@ import Base from '../layouts/Base.astro';
       </div>
 
       <div class="grid sm:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="bg-white rounded-card border border-border p-7 group hover:border-emerald/30 hover:shadow-lg transition-all duration-200">
+        <div class="bg-white rounded-card border border-border p-7 hover:border-emerald/30 hover:shadow-lg transition-all duration-200">
           <div class="w-12 h-12 rounded-2xl bg-emerald/10 flex items-center justify-center mb-5">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M12 3C8.13 3 5 6.13 5 10c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#10B981" opacity="0.2"/>
@@ -236,8 +159,7 @@ import Base from '../layouts/Base.astro';
           </p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-white rounded-card border border-border p-7 group hover:border-indigo/30 hover:shadow-lg transition-all duration-200">
+        <div class="bg-white rounded-card border border-border p-7 hover:border-indigo/30 hover:shadow-lg transition-all duration-200">
           <div class="w-12 h-12 rounded-2xl bg-indigo/10 flex items-center justify-center mb-5">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <rect x="3" y="6" width="18" height="13" rx="2.5" fill="#6366F1" opacity="0.15"/>
@@ -255,8 +177,7 @@ import Base from '../layouts/Base.astro';
           </p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bg-white rounded-card border border-border p-7 group hover:border-error/20 hover:shadow-lg transition-all duration-200">
+        <div class="bg-white rounded-card border border-border p-7 hover:border-error/20 hover:shadow-lg transition-all duration-200">
           <div class="w-12 h-12 rounded-2xl bg-error/10 flex items-center justify-center mb-5">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M12 3L4 8v5c0 4.41 3.41 8.53 8 9.54C16.59 21.53 20 17.41 20 13V8L12 3z" fill="#E11D48" opacity="0.15"/>
@@ -293,74 +214,51 @@ import Base from '../layouts/Base.astro';
         </p>
       </div>
 
-      <!-- Steps -->
-      <div class="grid sm:grid-cols-3 gap-8 relative">
-        <!-- Connecting line (desktop) -->
-        <div class="hidden sm:block absolute top-10 left-[calc(16.66%+20px)] right-[calc(16.66%+20px)] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"></div>
+      <div class="grid sm:grid-cols-3 gap-10">
 
         <!-- Step 1 -->
-        <div class="flex flex-col items-start">
-          <div class="relative mb-6">
-            <div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-emerald/20 to-emerald/5 border border-emerald/20 flex items-center justify-center">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <!-- Phone with location pin -->
-                <rect x="10" y="4" width="16" height="28" rx="3" stroke="#10B981" stroke-width="1.5"/>
-                <path d="M15 4V3M21 4V3" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="18" cy="30" r="1" fill="#10B981"/>
-                <path d="M18 13C15.79 13 14 14.79 14 17c0 3.5 4 7 4 7s4-3.5 4-7c0-2.21-1.79-4-4-4z" fill="#10B981" opacity="0.4"/>
-                <circle cx="18" cy="17" r="1.5" fill="#10B981"/>
-              </svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-emerald flex items-center justify-center font-grotesk font-bold text-midnight text-sm">1</div>
+        <div class="flex flex-col">
+          <!-- Screenshot thumbnail -->
+          <div class="w-full mb-6 rounded-2xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="/img/IMG_0978.PNG" alt="Geofence-Zonen einrichten" class="w-full h-auto block" />
           </div>
-          <h3 class="font-grotesk font-bold text-xl text-white mb-3">App installieren</h3>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-8 h-8 rounded-full bg-emerald flex items-center justify-center font-grotesk font-bold text-midnight text-sm flex-shrink-0">1</div>
+            <h3 class="font-grotesk font-bold text-lg text-white">App einrichten</h3>
+          </div>
           <p class="font-inter text-white/55 leading-relaxed text-sm">
-            Trag einmal deinen Wohnort und deine Uni ein. GLADR richtet die Geofence-Zonen
-            automatisch ein. Das war's.
+            Trag einmal Wohnort und Uni ein. GLADR richtet die Geofence-Zonen automatisch ein. Das war's.
           </p>
         </div>
 
         <!-- Step 2 -->
-        <div class="flex flex-col items-start">
-          <div class="relative mb-6">
-            <div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-indigo/20 to-indigo/5 border border-indigo/20 flex items-center justify-center">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <!-- Radar / signal waves -->
-                <circle cx="18" cy="20" r="3" fill="#6366F1"/>
-                <path d="M12 20c0-3.31 2.69-6 6-6s6 2.69 6 6" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-                <path d="M8 20c0-5.52 4.48-10 10-10s10 4.48 10 10" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                <path d="M4 20c0-7.73 6.27-14 14-14s14 6.27 14 14" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
-              </svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-indigo-500 flex items-center justify-center font-grotesk font-bold text-white text-sm">2</div>
+        <div class="flex flex-col">
+          <div class="w-full mb-6 rounded-2xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="/img/IMG_0976.PNG" alt="Fahrt schnell erfassen" class="w-full h-auto block" />
           </div>
-          <h3 class="font-grotesk font-bold text-xl text-white mb-3">Automatisch tracken</h3>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center font-grotesk font-bold text-white text-sm flex-shrink-0">2</div>
+            <h3 class="font-grotesk font-bold text-lg text-white">Automatisch tracken</h3>
+          </div>
           <p class="font-inter text-white/55 leading-relaxed text-sm">
-            GPS-Geofencing erkennt, wann du losfährst und ankommst. Fahrten werden
-            im Hintergrund erfasst und kategorisiert — ohne dass du etwas tun musst.
+            GPS-Geofencing erkennt Fahrten im Hintergrund. Manuelle Erfassung ist ebenfalls möglich — in Sekunden.
           </p>
         </div>
 
         <!-- Step 3 -->
-        <div class="flex flex-col items-start">
-          <div class="relative mb-6">
-            <div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <!-- Document with checkmark + bar chart -->
-                <rect x="8" y="4" width="20" height="28" rx="2.5" stroke="white" stroke-width="1.5" opacity="0.6"/>
-                <path d="M13 14h10M13 18h10M13 22h6" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                <path d="M13 10h10" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M22 24l-3 3-2-2" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white/20 border border-white/30 flex items-center justify-center font-grotesk font-bold text-white text-sm">3</div>
+        <div class="flex flex-col">
+          <div class="w-full mb-6 rounded-2xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="/img/IMG_0979.PNG" alt="Steuerreise – Fortschritt verfolgen" class="w-full h-auto block" />
           </div>
-          <h3 class="font-grotesk font-bold text-xl text-white mb-3">Fertige Übersicht</h3>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-8 h-8 rounded-full bg-white/20 border border-white/30 flex items-center justify-center font-grotesk font-bold text-white text-sm flex-shrink-0">3</div>
+            <h3 class="font-grotesk font-bold text-lg text-white">Fortschritt verfolgen</h3>
+          </div>
           <p class="font-inter text-white/55 leading-relaxed text-sm">
-            Am Jahresende: vollständige Auflistung aller Fahrten, Kilometer und
-            Steuerbeträge — genau so, wie das Finanzamt es braucht.
+            Die Steuerreise zeigt deinen Weg zur maximalen Erstattung. Am Jahresende: fertige Übersicht für das Finanzamt.
           </p>
         </div>
+
       </div>
     </div>
   </section>
