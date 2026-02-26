@@ -87,16 +87,16 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://gladr.ap
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class="bg-background font-inter text-midnight antialiased">
+  <body class="bg-slate-50 font-inter text-midnight antialiased">
     <slot />
 
-    <footer class="bg-midnight text-white/60 py-10">
-      <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-        <span class="font-grotesk font-semibold text-white">GLADR</span>
-        <nav class="flex gap-6">
-          <a href="/datenschutz" class="hover:text-white transition-colors">Datenschutz</a>
-          <a href="/impressum" class="hover:text-white transition-colors">Impressum</a>
-          <a href="mailto:info@eldunari.de" class="hover:text-white transition-colors">Kontakt</a>
+    <footer class="bg-midnight text-slate-400 py-12 border-t border-slate-800">
+      <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-8 text-sm">
+        <span class="font-grotesk font-bold text-white text-lg">GLADR</span>
+        <nav class="flex gap-8">
+          <a href="/datenschutz" class="hover:text-white transition-colors duration-200">Datenschutz</a>
+          <a href="/impressum" class="hover:text-white transition-colors duration-200">Impressum</a>
+          <a href="mailto:info@eldunari.de" class="hover:text-white transition-colors duration-200">Kontakt</a>
         </nav>
         <span>&copy; GLADR 2026</span>
       </div>

@@ -6,11 +6,15 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "export:psd:iphone15": "magick convert \"public/iPhone 15 Pro Max Mockup 05/Mockup.psd[0]\" public/img/iphone15-frame.png",
+    "export:psd:iphone17": "magick convert \"public/iPhone 17 Pro Max Mockup 01/Mockup.psd[0]\" public/img/iphone17-frame.png",
+    "export:psd:ipad2020": "magick convert \"public/2020 iPad Pro Mockup 01/Mockup.psd[0]\" public/img/ipad2020-frame.png",
+    "export:psd:all": "npm run export:psd:iphone15 && npm run export:psd:iphone17 && npm run export:psd:ipad2020"
   },
   "dependencies": {
-    "astro": "^4.16.0",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.18.0",
     "tailwindcss": "^3.4.14"
   }
 }
