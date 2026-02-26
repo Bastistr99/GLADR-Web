@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 
 <Base
   title="Datenschutzerklärung – GLADR"
-  description="Datenschutzerklärung der GLADR App gemäß DSGVO."
+  description="Datenschutzerklärung der GLADR App und Website gemäß DSGVO."
 >
   <div class="bg-background min-h-screen">
     <!-- Header -->
@@ -23,182 +23,286 @@ import Base from '../layouts/Base.astro';
 
     <!-- Content -->
     <div class="max-w-3xl mx-auto px-6 py-16">
-      <div class="prose-custom">
+      <div class="space-y-12">
 
-        <section class="mb-12">
+        <!-- 1. Verantwortlicher -->
+        <section>
           <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">1. Verantwortlicher</h2>
-          <div class="bg-white rounded-card border border-border p-6 font-inter text-midnight/70 leading-relaxed">
-            <p><strong class="text-midnight">[PLATZHALTER: Name / Firma]</strong></p>
-            <p>[PLATZHALTER: Straße, Hausnummer]</p>
-            <p>[PLATZHALTER: PLZ, Stadt]</p>
+          <div class="bg-white rounded-card border border-border p-6 font-inter text-midnight/70 leading-relaxed space-y-1">
+            <p><strong class="text-midnight">Sebastian Straub</strong></p>
+            <p>Amalienstraße 22</p>
+            <p>80333 München</p>
             <p>Deutschland</p>
             <p class="mt-3">E-Mail: <a href="mailto:datenschutz@gladr.app" class="text-emerald hover:underline">datenschutz@gladr.app</a></p>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">2. Welche Daten wir erheben</h2>
+        <!-- 2. Geltungsbereich -->
+        <section>
+          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">2. Geltungsbereich</h2>
+          <p class="font-inter text-midnight/70 leading-relaxed">
+            Diese Datenschutzerklärung gilt für die <strong class="text-midnight">GLADR-App</strong> (iOS und Android)
+            sowie für die <strong class="text-midnight">Website</strong> unter <span class="font-grotesk text-midnight">web.eldunari.de</span>.
+            Beide Dienste werden vom selben Verantwortlichen betrieben und in dieser Erklärung gemeinsam beschrieben.
+          </p>
+        </section>
+
+        <!-- 3. Welche Daten wir erheben -->
+        <section>
+          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">3. Welche Daten wir erheben</h2>
+
+          <h3 class="font-grotesk font-semibold text-lg text-midnight mb-3 mt-6">3.1 Bei Nutzung der App</h3>
           <p class="font-inter text-midnight/70 leading-relaxed mb-4">
             GLADR erhebt nur die Daten, die für die Funktion der App notwendig sind:
           </p>
           <div class="space-y-4">
             <div class="bg-white rounded-card border border-border p-6">
-              <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">Kontodaten</h3>
+              <h4 class="font-grotesk font-semibold text-base text-midnight mb-2">Kontodaten</h4>
               <p class="font-inter text-midnight/60 text-sm leading-relaxed">
-                E-Mail-Adresse und Passwort (verschlüsselt) für die Registrierung und Anmeldung.
-                Optional: Name für die Anzeige im Profil.
+                E-Mail-Adresse und Passwort (gespeichert als bcrypt-Hash, nie im Klartext) für Registrierung
+                und Anmeldung. Optional: Vor- und Nachname für die Anzeige im Profil.
               </p>
             </div>
             <div class="bg-white rounded-card border border-border p-6">
-              <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">Standortdaten</h3>
+              <h4 class="font-grotesk font-semibold text-base text-midnight mb-2">Standortdaten</h4>
               <p class="font-inter text-midnight/60 text-sm leading-relaxed">
-                GPS-Koordinaten werden lokal auf dem Gerät verarbeitet, um Eintritte und Austritte
-                aus konfigurierten Zonen (Zuhause, Uni, Bibliothek) zu erkennen. Es werden keine
-                kontinuierlichen Routen gespeichert. Nur Zeitpunkt und Zone des Ereignisses werden
-                erfasst.
+                GPS-Koordinaten werden ausschließlich lokal auf deinem Gerät verarbeitet, um Eintritte
+                und Austritte aus deinen konfigurierten Zonen zu erkennen (Geofencing). Es werden
+                <strong class="text-midnight">keine kontinuierlichen Bewegungsprofile oder Routen</strong> gespeichert.
+                Auf unseren Servern landen lediglich Zeitpunkt und Name der Zone (z.B. „Uni verlassen um 08:42").
               </p>
             </div>
             <div class="bg-white rounded-card border border-border p-6">
-              <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">Fahrtdaten</h3>
+              <h4 class="font-grotesk font-semibold text-base text-midnight mb-2">Geofence-Zonen</h4>
               <p class="font-inter text-midnight/60 text-sm leading-relaxed">
-                Start- und Endzeit, Distanz in Kilometern, Zweck der Fahrt (z.B. „Uni", „Bibliothek").
-                Diese Daten werden für die Steuerberechnung benötigt und in deinem Account gespeichert.
+                Koordinaten (Breitengrad, Längengrad) und Radius der von dir eingetragenen Zonen
+                (Wohnort, Universität, Bibliothek). Diese Daten sind notwendig, damit die App auf
+                dem Gerät erkennen kann, wann du eine Zone betrittst oder verlässt.
               </p>
             </div>
             <div class="bg-white rounded-card border border-border p-6">
-              <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">Geofence-Zonen</h3>
+              <h4 class="font-grotesk font-semibold text-base text-midnight mb-2">Fahrtdaten</h4>
               <p class="font-inter text-midnight/60 text-sm leading-relaxed">
-                Koordinaten und Radius der von dir konfigurierten Zonen (Wohnort, Universität,
-                Bibliothek). Diese Daten sind für die automatische Fahrtenerkennung notwendig.
+                Start- und Endzeitpunkt, Distanz in Kilometern, Transportmittel und Zweck der Fahrt
+                (z.B. „Uni", „Bibliothek"). Diese Daten bilden die Grundlage der Steuerberechnung
+                und werden in deinem Account gespeichert. Du kannst einzelne Fahrten jederzeit
+                bearbeiten oder löschen.
+              </p>
+            </div>
+            <div class="bg-white rounded-card border border-border p-6">
+              <h4 class="font-grotesk font-semibold text-base text-midnight mb-2">Nutzungsanalytik (PostHog)</h4>
+              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+                Wir erfassen anonymisierte App-Ereignisse (z.B. welche Screens aufgerufen werden,
+                ob Fahrten manuell oder automatisch erstellt werden) um die App zu verbessern.
+                Es werden keine Inhalte deiner Fahrten oder Standorte an PostHog übermittelt.
+                Gerätetyp, App-Version und ein anonymer Sitzungs-Identifier werden erfasst.
+              </p>
+            </div>
+            <div class="bg-white rounded-card border border-border p-6">
+              <h4 class="font-grotesk font-semibold text-base text-midnight mb-2">Fehlerberichte (GlitchTip)</h4>
+              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+                Bei App-Abstürzen oder Fehlern wird automatisch ein Fehlerbericht erstellt, der
+                den Fehlertyp, den Stack-Trace und Geräteinformationen (OS-Version, App-Version)
+                enthält. Fehlerberichte können in Einzelfällen technische Nutzerkennungen enthalten.
+                GlitchTip wird von uns selbst auf EU-Servern betrieben — die Daten verlassen
+                unsere Infrastruktur nicht.
+              </p>
+            </div>
+          </div>
+
+          <h3 class="font-grotesk font-semibold text-lg text-midnight mb-3 mt-8">3.2 Bei Besuch der Website</h3>
+          <div class="space-y-4">
+            <div class="bg-white rounded-card border border-border p-6">
+              <h4 class="font-grotesk font-semibold text-base text-midnight mb-2">Server-Zugriffsprotokolle</h4>
+              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+                Beim Aufruf der Website speichert unser Webserver automatisch: IP-Adresse,
+                Datum und Uhrzeit des Zugriffs, aufgerufene URL, HTTP-Statuscode sowie
+                Browser und Betriebssystem (User-Agent). Diese Daten sind für den technischen
+                Betrieb notwendig und werden nach spätestens 14 Tagen automatisch gelöscht.
+              </p>
+            </div>
+            <div class="bg-white rounded-card border border-border p-6 border-emerald/20 bg-emerald/5">
+              <h4 class="font-grotesk font-semibold text-base text-midnight mb-2">Keine Cookies, kein Tracking</h4>
+              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+                Diese Website setzt <strong class="text-midnight">keine Cookies</strong>. Es werden keine
+                Tracking-Pixel, keine Drittanbieter-Skripte und keine Werbenetzwerke eingebunden.
+                Alle Schriftarten werden von unserem eigenen Server geladen — es findet kein
+                Request an externe Dienste wie Google Fonts statt.
               </p>
             </div>
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">3. Zweck der Verarbeitung</h2>
-          <p class="font-inter text-midnight/70 leading-relaxed mb-4">
-            Deine Daten werden ausschließlich für folgende Zwecke verarbeitet:
-          </p>
+        <!-- 4. Zweck -->
+        <section>
+          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">4. Zweck der Verarbeitung</h2>
           <ul class="space-y-2 font-inter text-midnight/70">
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald mt-2 flex-shrink-0"></span>
-              Authentifizierung und Kontoverwaltung
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald mt-2 flex-shrink-0"></span>
-              Automatische Erkennung von Fahrten zur Uni, Bibliothek und Lerngruppen
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald mt-2 flex-shrink-0"></span>
-              Berechnung steuerlich absetzbarer Fahrtkosten gemäß § 9 EStG
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald mt-2 flex-shrink-0"></span>
-              Erstellung einer Jahresübersicht für die Steuererklärung
-            </li>
+            {[
+              'Bereitstellung der App-Funktionen (Konto, Fahrtenerkennung, Steuerberechnung)',
+              'Automatische Erkennung von Fahrten zur Uni, Bibliothek und zu Lerngruppen',
+              'Berechnung steuerlich absetzbarer Fahrtkosten gemäß § 9 EStG',
+              'Erstellung einer Jahresübersicht für die Steuererklärung',
+              'Technischer Betrieb und Sicherheit der App und Website',
+              'Fehlerbehebung und Qualitätssicherung (Fehlerberichte)',
+              'Produktverbesserung durch anonymisierte Nutzungsanalytik',
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald mt-2 flex-shrink-0"></span>
+                {item}
+              </li>
+            ))}
           </ul>
         </section>
 
-        <section class="mb-12">
-          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">4. Rechtsgrundlage (Art. 6 DSGVO)</h2>
+        <!-- 5. Rechtsgrundlage -->
+        <section>
+          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">5. Rechtsgrundlage (Art. 6 DSGVO)</h2>
+          <div class="space-y-3 font-inter text-midnight/70">
+            <div class="flex items-start gap-3">
+              <span class="font-grotesk font-semibold text-midnight text-xs bg-border/60 px-2 py-1 rounded mt-0.5 flex-shrink-0 whitespace-nowrap">Art. 6 Abs. 1 lit. a</span>
+              <span><strong class="text-midnight">Einwilligung</strong> — für die Standortnutzung im Hintergrund und für die Nutzungsanalytik via PostHog. Du kannst die Einwilligung jederzeit widerrufen (Standort: in den Geräteeinstellungen; Analytik: in den App-Einstellungen).</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="font-grotesk font-semibold text-midnight text-xs bg-border/60 px-2 py-1 rounded mt-0.5 flex-shrink-0 whitespace-nowrap">Art. 6 Abs. 1 lit. b</span>
+              <span><strong class="text-midnight">Vertragserfüllung</strong> — Kontodaten, Fahrtdaten und Geofence-Zonen werden zur Bereitstellung der vertraglich vereinbarten App-Funktionen verarbeitet.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="font-grotesk font-semibold text-midnight text-xs bg-border/60 px-2 py-1 rounded mt-0.5 flex-shrink-0 whitespace-nowrap">Art. 6 Abs. 1 lit. f</span>
+              <span><strong class="text-midnight">Berechtigte Interessen</strong> — Server-Zugriffsprotokolle und Fehlerberichte zur Sicherstellung des technischen Betriebs und zur Fehleranalyse.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Drittanbieter -->
+        <section>
+          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">6. Auftragsverarbeiter und Drittanbieter</h2>
+          <p class="font-inter text-midnight/70 leading-relaxed mb-6">
+            Wir setzen ausschließlich Dienstleister ein, die ihre Infrastruktur in der
+            Europäischen Union betreiben. Es findet keine Übermittlung personenbezogener
+            Daten in Drittländer außerhalb der EU statt.
+          </p>
+          <div class="space-y-4">
+
+            <div class="bg-white rounded-card border border-border p-6">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <h3 class="font-grotesk font-semibold text-lg text-midnight">Supabase</h3>
+                <span class="font-inter text-xs text-emerald bg-emerald/10 px-2 py-1 rounded-full flex-shrink-0">EU-Central (Frankfurt)</span>
+              </div>
+              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+                Supabase Inc. ist unser Backend-Dienstleister für Datenbankhosting und Authentifizierung.
+                Gespeichert werden: Kontodaten, Fahrtdaten, Geofence-Zonen.
+                Unsere Supabase-Instanz läuft in der Region <strong class="text-midnight">eu-central-1 (Frankfurt, Deutschland)</strong>.
+                Supabase verarbeitet Daten gemäß einem Auftragsverarbeitungsvertrag (DPA) nach Art. 28 DSGVO.
+              </p>
+              <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer" class="font-inter text-xs text-emerald hover:underline mt-2 inline-block">
+                Datenschutzerklärung Supabase →
+              </a>
+            </div>
+
+            <div class="bg-white rounded-card border border-border p-6">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <h3 class="font-grotesk font-semibold text-lg text-midnight">PostHog (EU Cloud)</h3>
+                <span class="font-inter text-xs text-emerald bg-emerald/10 px-2 py-1 rounded-full flex-shrink-0">EU-Central (Frankfurt)</span>
+              </div>
+              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+                PostHog Inc. stellt uns anonymisierte Produktanalytik bereit. Wir nutzen ausschließlich
+                die <strong class="text-midnight">EU Cloud (eu.posthog.com)</strong>, gehostet in Frankfurt.
+                Es werden keine Inhalte (Fahrtdaten, Standorte, Namen) an PostHog übermittelt —
+                nur anonymisierte Ereignisse und Geräteinformationen.
+                Du kannst die Analytik jederzeit in den App-Einstellungen deaktivieren.
+              </p>
+              <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer" class="font-inter text-xs text-emerald hover:underline mt-2 inline-block">
+                Datenschutzerklärung PostHog →
+              </a>
+            </div>
+
+            <div class="bg-white rounded-card border border-border p-6">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <h3 class="font-grotesk font-semibold text-lg text-midnight">Hostinger (Server-Hosting)</h3>
+                <span class="font-inter text-xs text-emerald bg-emerald/10 px-2 py-1 rounded-full flex-shrink-0">EU (Litauen)</span>
+              </div>
+              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
+                Hostinger International Ltd. stellt die Serverinfrastruktur bereit, auf der
+                diese Website sowie unsere selbst betriebenen Dienste (Fehlerprotokollierung,
+                Systemmonitoring) laufen. Hostinger ist ein europäisches Unternehmen mit Sitz
+                in Litauen und verarbeitet Daten gemäß DSGVO.
+              </p>
+              <a href="https://www.hostinger.de/datenschutz" target="_blank" rel="noopener noreferrer" class="font-inter text-xs text-emerald hover:underline mt-2 inline-block">
+                Datenschutzerklärung Hostinger →
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 7. Speicherdauer -->
+        <section>
+          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">7. Speicherdauer</h2>
+          <div class="space-y-3">
+            {[
+              { label: 'Account- und Fahrtdaten', value: 'Solange dein Account aktiv ist. Nach Löschung des Accounts werden alle Daten innerhalb von 30 Tagen unwiederbringlich gelöscht.' },
+              { label: 'Server-Zugriffsprotokolle', value: 'Maximal 14 Tage, danach automatische Löschung.' },
+              { label: 'Fehlerberichte (GlitchTip)', value: '90 Tage, danach automatische Löschung.' },
+              { label: 'Analytik (PostHog)', value: 'Anonymisierte Ereignisse werden 12 Monate gespeichert.' },
+            ].map(({ label, value }) => (
+              <div class="bg-white rounded-card border border-border p-5 flex gap-4">
+                <div class="font-grotesk font-semibold text-sm text-midnight w-52 flex-shrink-0">{label}</div>
+                <div class="font-inter text-sm text-midnight/60 leading-relaxed">{value}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- 8. Deine Rechte -->
+        <section>
+          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">8. Deine Rechte</h2>
           <p class="font-inter text-midnight/70 leading-relaxed mb-4">
-            Die Verarbeitung deiner Daten erfolgt auf Grundlage von:
+            Du hast gegenüber uns jederzeit folgende Rechte gemäß DSGVO:
           </p>
           <ul class="space-y-3 font-inter text-midnight/70">
             <li class="flex items-start gap-3">
-              <span class="font-grotesk font-semibold text-midnight text-sm bg-border/60 px-2 py-0.5 rounded mt-0.5 flex-shrink-0">Art. 6 Abs. 1 lit. a</span>
-              <span>Deine ausdrückliche Einwilligung, insbesondere für die Standortnutzung.</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
+              <span><strong class="text-midnight">Auskunft</strong> (Art. 15 DSGVO) — Welche Daten wir über dich gespeichert haben</span>
             </li>
             <li class="flex items-start gap-3">
-              <span class="font-grotesk font-semibold text-midnight text-sm bg-border/60 px-2 py-0.5 rounded mt-0.5 flex-shrink-0">Art. 6 Abs. 1 lit. b</span>
-              <span>Vertragserfüllung — Bereitstellung der App-Funktionen, die du gebucht hast.</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
+              <span><strong class="text-midnight">Berichtigung</strong> (Art. 16 DSGVO) — Korrektur unrichtiger Daten, direkt in der App oder per E-Mail</span>
             </li>
             <li class="flex items-start gap-3">
-              <span class="font-grotesk font-semibold text-midnight text-sm bg-border/60 px-2 py-0.5 rounded mt-0.5 flex-shrink-0">Art. 6 Abs. 1 lit. f</span>
-              <span>Berechtigte Interessen — Sicherheit und Betrieb der Anwendung.</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
+              <span><strong class="text-midnight">Löschung</strong> (Art. 17 DSGVO) — Account-Löschung direkt in der App unter Einstellungen, oder per E-Mail-Anfrage</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
+              <span><strong class="text-midnight">Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
+              <span><strong class="text-midnight">Datenübertragbarkeit</strong> (Art. 20 DSGVO) — Export deiner Fahrtdaten als CSV auf Anfrage</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
+              <span><strong class="text-midnight">Widerruf der Einwilligung</strong> (Art. 7 Abs. 3 DSGVO) — Standort-Berechtigung: jederzeit in den Geräteeinstellungen; Analytik: in den App-Einstellungen</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
+              <span><strong class="text-midnight">Beschwerde</strong> (Art. 77 DSGVO) — beim Bayerischen Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach</span>
             </li>
           </ul>
         </section>
 
-        <section class="mb-12">
-          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">5. Drittanbieter</h2>
-          <div class="space-y-4">
-            <div class="bg-white rounded-card border border-border p-6">
-              <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">Supabase</h3>
-              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
-                Wir nutzen Supabase als Backend-Dienstleister für Datenbankhosting und Authentifizierung.
-                Die Server befinden sich in der EU (Frankfurt/West-Europa). Supabase ist DSGVO-konform.
-                Datenschutzerklärung: <span class="text-midnight/40">[PLATZHALTER: Supabase-Datenschutz-URL]</span>
-              </p>
-            </div>
-            <div class="bg-white rounded-card border border-border p-6">
-              <h3 class="font-grotesk font-semibold text-lg text-midnight mb-2">PostHog</h3>
-              <p class="font-inter text-midnight/60 text-sm leading-relaxed">
-                [PLATZHALTER: Falls PostHog genutzt wird — Beschreibung der anonymisierten
-                Nutzungsanalyse, Opt-out-Möglichkeit, und Hosting-Standort.]
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">6. Speicherdauer</h2>
-          <p class="font-inter text-midnight/70 leading-relaxed">
-            Deine Daten werden gespeichert, solange dein Account aktiv ist. Nach Löschung deines
-            Accounts werden alle personenbezogenen Daten innerhalb von 30 Tagen vollständig und
-            unwiederbringlich gelöscht. Fahrtdaten können vom Nutzer jederzeit in der App gelöscht werden.
-          </p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">7. Deine Rechte</h2>
-          <p class="font-inter text-midnight/70 leading-relaxed mb-4">
-            Du hast jederzeit folgende Rechte gemäß DSGVO:
-          </p>
-          <ul class="space-y-2 font-inter text-midnight/70">
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
-              <strong class="text-midnight">Auskunft</strong> (Art. 15 DSGVO) — Welche Daten wir über dich gespeichert haben
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
-              <strong class="text-midnight">Berichtigung</strong> (Art. 16 DSGVO) — Korrektur falscher Daten
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
-              <strong class="text-midnight">Löschung</strong> (Art. 17 DSGVO) — Direkt in der App oder per E-Mail-Anfrage
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
-              <strong class="text-midnight">Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
-              <strong class="text-midnight">Datenübertragbarkeit</strong> (Art. 20 DSGVO) — Export deiner Daten als CSV/JSON
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
-              <strong class="text-midnight">Widerruf der Einwilligung</strong> (Art. 7 Abs. 3 DSGVO) — jederzeit ohne Angabe von Gründen
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></span>
-              <strong class="text-midnight">Beschwerde</strong> bei der zuständigen Datenschutzbehörde (Art. 77 DSGVO)
-            </li>
-          </ul>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">8. Kontakt</h2>
+        <!-- 9. Kontakt -->
+        <section>
+          <h2 class="font-grotesk font-bold text-2xl text-midnight mb-4">9. Kontakt für Datenschutzanfragen</h2>
           <div class="bg-white rounded-card border border-border p-6 font-inter text-midnight/70 leading-relaxed">
-            <p>Bei Fragen zum Datenschutz wende dich an:</p>
+            <p>Für alle Fragen zum Datenschutz, Auskunftsersuchen oder Löschanfragen:</p>
             <p class="mt-3">
-              <a href="mailto:datenschutz@gladr.app" class="text-emerald hover:underline font-medium">
+              <a href="mailto:datenschutz@gladr.app" class="text-emerald hover:underline font-medium text-base">
                 datenschutz@gladr.app
               </a>
             </p>
             <p class="mt-2 text-midnight/50 text-sm">
-              Wir antworten innerhalb von 30 Tagen auf Datenschutzanfragen.
+              Wir beantworten Datenschutzanfragen innerhalb von 30 Tagen.
             </p>
           </div>
         </section>
